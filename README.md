@@ -45,7 +45,7 @@ openssl pkcs12 -in elastic-certificates.p12 -cacerts -nokeys -out elasticsearch-
         elasticsearch {
             ssl => true
             ssl_certificate_verification => false
-            cacert => "/home/henrik/elasticsearch-ca.pem"
+            cacert => "/etc/logstash/certs/elasticsearch-ca.pem"
             hosts => ["https://localhost:9200"]
 ...
 ```
